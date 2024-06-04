@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    color: var(--white);
+}
+
+.header {
+    background-color: black;
+    color: white;
+}
+
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --pink: #ff0080;
+    --blue: #06C4DA;
+    --yellow: #ffd300;
+    --hover-black: #959595;
+}
+
+.banner {
+    width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    padding: 5% 0 5% 0;
+    background-color: var(--black);
+    /*flex-wrap: wrap;*/
+
+}
+
+.banner-text {
+    width: 100%;
+    margin: 5%;
+}
+
+h1 {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+}
+
+h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+}
+
+.greeting {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.animated-text {                         /*from https://www.darkcode.info/2023/04/typing-text-animation-using-only-html.html*/
+    color: var(--black);
+    font-size: 32px;
+    font-weight: bold;
+    margin: 20px 0 16px 0;
+    min-width: 280px;
+    max-width: 100%;
+    background-color: var(--black);
+    border-radius: 4px;
+    border: 1px solid var(--black);
+    box-shadow: 4px 4px 0 0 var(--black);
+}
+
+.animated-text span{                    /*from https://www.darkcode.info/2023/04/typing-text-animation-using-only-html.html*/
+    position: relative;
+}
+
+.animated-text span::before{                /*from https://www.darkcode.info/2023/04/typing-text-animation-using-only-html.html*/
+    content: "Hello";
+    color: var(--pink);
+    animation: words 20s infinite;
+}
+
+.animated-text span::after{             /*from https://www.darkcode.info/2023/04/typing-text-animation-using-only-html.html*/
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: var(--black);
+    border-left: 2px solid var(--pink);
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {                     /*from https://www.darkcode.info/2023/04/typing-text-animation-using-only-html.html*/
+    to{
+        border-left: 2px solid #ff7f5000;
+    }
+}
+
+@keyframes words {                      /*from https://www.darkcode.info/2023/04/typing-text-animation-using-only-html.html*/
+    0%,20%{
+        content: "Line Svensen";
+    }
+    21%,40%{
+        content: "a developer";
+    }
+    41%,60%{
+        content: "an UX designer";
+    }
+    61%,80%{
+        content: "an entrepreneur";
+    }
+    81%,100%{
+        content: "an enthusiast";
+    }
+}
+
+@keyframes typing {                     /*from https://www.darkcode.info/2023/04/typing-text-animation-using-only-html.html*/
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+
+.animation-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    animation: float 6s ease-in-out infinite;
+
+}
+
+.image-background-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, var(--blue), var(--yellow), var(--pink), var(--blue));
+    background-size: 400% 400%;
+    max-width: 500px;
+    max-height: 500px;
+    animation: gradient 12s ease infinite;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 80px 0 rgb(87, 87, 87);  /*from https://getcssscan.com/css-box-shadow-examples */
+
+}
+
+.image-background-circle img {
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+@keyframes float {
+    0% {
+
+        transform: translatey(0px);
+    }
+    50% {
+
+        transform: translatey(-12px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+@keyframes gradient {               /*from https://dev.to/babib/amazing-pure-html-and-css-background-animations-4dim */
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .banner {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .banner-text h2 {
+        font-size: 28px;
+    }
+}
+
+
+
