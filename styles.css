@@ -4,10 +4,108 @@
     color: var(--white);
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger i {
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: var(--black);
+    padding: 16px;
+    border-radius: 4px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: rgba(196, 196, 196, 0.25) 0px 50px 100px -20px, rgba(183, 183, 183, 0.3) 0px 30px 60px -30px;
+}
+
+.dropdown-menu a {
+    margin: 10px 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.close-btn {
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+
+
 .header {
     background-color: black;
     color: white;
 }
+
+
+.logo {
+    height: 28px;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 4px 16px 4px;
+    text-transform: uppercase;
+
+}
+
+ul a {
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+ul a:hover, .dropdown-menu a:hover {
+    transition: all 0.5s;
+    text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 8px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 20px #ffffff, 0 0 25px #ffffff, 0 0 30px #ffffff;
+}
+
+a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+
+a:after {
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+
+
 
 :root {
     --black: #000000;
@@ -17,6 +115,7 @@
     --yellow: #ffd300;
     --hover-black: #959595;
 }
+
 
 .banner {
     width: 100%;
@@ -184,6 +283,7 @@ h2 {
 }
 
 @media (max-width: 700px) {
+
     .banner {
         flex-wrap: wrap;
         flex-direction: column;
@@ -227,7 +327,37 @@ h2 {
         padding-top: 16px;
         padding-bottom: 16px;
     }
+
+}
+
+@media (min-width: 700px) {
+    .menu {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 16px 5% 16px 10%;
+        text-transform: uppercase;
+    }
+
+    ul a {
+        text-decoration: none;
+        font-size: 16px;
+        font-family: "Poppins", sans-serif;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
 }
 
 
+@media (max-width: 500px) {
+    .nav-item {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
 
