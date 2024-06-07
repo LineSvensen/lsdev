@@ -4,6 +4,104 @@
     color: var(--white);
 }
 
+
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --pink: #ff0080;
+    --blue: #06C4DA;
+    --yellow: #ffd300;
+    --hover-black: #959595;
+}
+
+.projects-heading {
+    font-size: 28px;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 900;
+}
+
+
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5% 5% 0 5%;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    background-color: black;
+}
+
+.cards-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 4px;
+    max-width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 20px 0;
+    margin: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.card a {
+    color: #ff0080;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding: 0;
+    margin: 16px;
+
+}
+
+.card a:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+.card-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-links i {
+    color: #ff0080;
+}
+
+.card h3 {
+    font-family: "League Spartan", sans-serif;
+    font-size: 24px;
+    color: #000000;
+}
+
+.card p {
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #000000;
+    padding: 8px 16px 8px 16px;
+}
+
+.card img {
+    margin: 20px;
+    max-width: 80%;
+    max-height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    border-radius: 4px;
+}
+
 .hamburger {
     display: none;
     cursor: pointer;
@@ -104,19 +202,6 @@ a:hover:after {
     left: 0;
 }
 
-
-
-
-:root {
-    --black: #000000;
-    --white: #FFFFFF;
-    --pink: #ff0080;
-    --blue: #06C4DA;
-    --yellow: #ffd300;
-    --hover-black: #959595;
-}
-
-
 .banner {
     width: 100%;
     max-height: 100%;
@@ -198,8 +283,6 @@ h2 {
     padding: 0 16px 0 16px;
     justify-content: center;
     animation: float 6s ease-in-out infinite;
-
-
 }
 
 .image-background-circle {
@@ -213,14 +296,12 @@ h2 {
     animation: gradient 12s ease infinite;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 0 80px 0 rgb(87, 87, 87);  /*from https://getcssscan.com/css-box-shadow-examples */
-
+    box-shadow: 0 0 80px 0 rgb(145, 145, 145);  /*from https://getcssscan.com/css-box-shadow-examples */
 }
 
 .image-background-circle img {
     max-width: 100%;
     max-height: 100%;
-
 }
 
 @keyframes cursor {                     /*from https://www.darkcode.info/2023/04/typing-text-animation-using-only-html.html*/
@@ -330,6 +411,45 @@ h2 {
 
 }
 
+hr {
+    border: 1px solid white;
+    box-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 8px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 20px #ffffff, 0 0 25px #ffffff, 0 0 30px #ffffff;
+}
+
+.experience-section {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background-color: black;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 900;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+
+}
+
+.exp-box {
+    padding: 16px 5% 16px 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.experience-section h3 {
+    font-size: 20px;
+    max-width: 350px;
+    color: #ff0080;
+}
+
+.experience-section p {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    padding: 0 16px 0 16px;
+}
+
 @media (min-width: 700px) {
     .menu {
         list-style-type: none;
@@ -361,3 +481,17 @@ h2 {
     }
 }
 
+@media (max-width: 1000px) {
+    .cards-section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .experience-section {
+        flex-wrap: wrap;
+    }
+
+
+}
