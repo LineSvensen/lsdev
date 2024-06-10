@@ -348,6 +348,9 @@ h2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 20px 0 20px 0;
+    justify-content: center;
+    align-items: center;
     /*width: 300px;*/
 }
 
@@ -355,7 +358,7 @@ h2 {
 .skill-row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
     width: 100%;
@@ -368,6 +371,7 @@ h2 {
     align-items: center;
     padding: 20px;
     text-align: center;
+    max-width: 250px;
 }
 
 .skill img {
@@ -390,6 +394,59 @@ h2 {
     60%{transform: scale(.9);}
     80%{transform: scale(1);}
     100%{transform: scale(.9);}
+}
+
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0 20px 0;
+    gap: 20px;
+}
+
+.contact-heading {
+    font-size: 28px;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 900;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    width: 200px;
+
+
+    color: #ff0080;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+/*.contact-box:hover {*/
+/*    text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 8px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 20px #ffffff, 0 0 25px #ffffff, 0 0 30px #ffffff;*/
+/*}*/
+
+.contact-box p {
+    color: #ff0080;
+}
+
+.contact-box i {
+    padding: 8px;
+    font-size: 32px;
+    color: #ff0080;
 }
 
 .footer {
@@ -619,5 +676,9 @@ hr {
         flex-wrap: wrap;
     }
 
-
+    .contact-section {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }
