@@ -4,6 +4,8 @@
 
 ### Click [here](https://lsdev.vercel.app/) to view the blog
 
+![screenshot-readme.png](assets%2Fscreenshot-readme.png)
+
 ## Programs used 🛠️
 - Webstorm (HTML, CSS, JavaScript)
 - Sourcetree (push project to Github)
