@@ -23,8 +23,8 @@
 
 - Animations
 - Link to 3 projects/websites
-
-The website runs smooth on all devices over 360px.
+- Hamburger menu
+- Responsive: The website runs smooth on all devices over 360px.
 
 ## Contact:
 
