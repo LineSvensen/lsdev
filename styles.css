@@ -308,7 +308,7 @@ h2 {
     width: 100%;
     justify-content: center;
     font-family: "Poppins", sans-serif;
-    padding: 0 5% 0 5%;
+    padding: 20px;
 }
 
 .help-heading, .about-heading {
@@ -323,8 +323,10 @@ h2 {
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 8px;
 }
 
 .story p {
@@ -335,30 +337,49 @@ h2 {
 }
 
 .story img {
-    width: 25%;
+    max-width: 15%;
+    min-width: 150px;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 650px;
+}
+
+.about-text p {
+    min-width: 80%;
 }
 
 .about-me {
-    padding: 16px 5% 16px 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.skill-icons img {
-    width: 60px;
-    padding: 4px;
-}
 
 .school-icons {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    gap: 28px;
+    flex-wrap: wrap;
 }
 
 .school-icons img {
     width: 80px;
+    padding: 4px;
+    min-width: 120px;
+}
+
+#hk {
+    min-width: 180px;
+}
+
+.skill-icons img {
+    width: 60px;
     padding: 4px;
 }
 
@@ -369,6 +390,7 @@ h2 {
     margin: 20px 0 20px 0;
     justify-content: center;
     align-items: center;
+    padding: 20px 0 20px 0;
 }
 
 .skill-row {
@@ -419,7 +441,6 @@ h2 {
     align-items: center;
     text-align: center;
     margin: 20px 0 20px 0;
-    gap: 20px;
 }
 
 .contact-heading {
@@ -433,7 +454,6 @@ h2 {
     flex-direction: row;
     align-items: center;
     align-content: center;
-    gap: 20px;
 }
 
 .contact-box {
@@ -656,7 +676,6 @@ hr {
         align-items: center;
     }
     .story {
-        flex-direction: column;
         flex-wrap: wrap;
     }
     .story img {
